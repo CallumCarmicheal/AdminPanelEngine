@@ -2,14 +2,9 @@
 	
 	namespace CalPanel\Structure\Sidebar;
 	
-	function Start() {
-		
-	}
-	
-	
-	
 	function CreateSideBar($sideBarName = "CalPanel") {
-		?>
+		ob_start(); ?>
+		
 		<div class="nav-bar-container">
 			<div class="nav-menu">
 				<div class="hamburger">
@@ -50,8 +45,7 @@
 	
 		</div>
 		
-		<?php 
-	}
+	<?php return ob_get_clean(); }
 	
 	
 ?>

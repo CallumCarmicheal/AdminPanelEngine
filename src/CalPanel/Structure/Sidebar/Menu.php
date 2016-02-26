@@ -4,18 +4,18 @@
 
 	
 	function Start() {
-		echo '<!-- BEGIN MENU LAYER --> <div class="menu-layer"> <ul>';
+		return '<!-- BEGIN MENU LAYER --> <div class="menu-layer"> <ul>';
 	}
 	
 	function End() {
-		echo '</div><!--.menu-layer--> <!-- END OF MENU LAYER -->';
+		return '</div><!--.menu-layer--> <!-- END OF MENU LAYER -->';
 	}
 	
 	
 	function AddMenuLabel($Text) {
 		$format = '<li><a>%s</a></li>';
 		$menuItem  = sprintf($format, $Text);
-		echo $menuItem;
+		return $menuItem;
 	}
 	
 	/**
@@ -24,18 +24,18 @@
 	function AddMenuLink($Name, $Link) {
 		$urlFormat = '<li> <a href="%s">%s</a> </li>';
 		$menuItem  = sprintf($urlFormat, $Link, $Name);
-		echo $menuItem;
+		return $menuItem;
 	}
 	
 	
 	function MenuStart($Name) {
 		$format = '<li> <a href="javascript:;">%s</a> <ul class="child-menu"> ';
 		$menuItem = sprintf($format, $Name);
-		echo $menuItem;
+		return $menuItem;
 	}
 	
 	function MenuEnd() {
-		echo '</ul> </li>';
+		return '</ul> </li>';
 	}
 	
 ?>

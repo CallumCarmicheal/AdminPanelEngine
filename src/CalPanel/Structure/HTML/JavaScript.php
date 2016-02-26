@@ -1,9 +1,9 @@
 <?php
 	
-	namespace CalPanel\Structure\Javascript;
+	namespace CalPanel\Structure\HTML\Javascript;
 	
 	function Scripts() {
-		?>
+		ob_start(); ?>
 		
 		<!-- BEGIN GLOBAL AND THEME VENDORS -->
 			<script src="assets/globals/js/global-vendors.js"></script>
@@ -46,7 +46,6 @@
 				});
 			</script>
 		<!-- END INITIALIZATION-->
-		<?php
-	}
+	<?php return ob_get_clean(); }
 
 ?>

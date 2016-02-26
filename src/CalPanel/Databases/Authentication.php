@@ -18,7 +18,7 @@
 	function DieOnError()	{ return true; 	}	// DEFAULT: TRUE 
 	
 	
-	function GetString() 	{ 
+	function GetPDO() 	{ 
 		// -----------------------------
 		$dbHost 		= GetHost();
 		$dbPort 		= GetPort();
@@ -65,8 +65,5 @@
 		
 		
 		return $dbPDO; 
-	
-	
-	
 	}
 ?>

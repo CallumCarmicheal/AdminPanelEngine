@@ -1,15 +1,19 @@
 <?php
-	namespace CalPanel\Structure\Headers;
 	
+	namespace CalPanel\Structure\HTML\Headers;	
+
 	function Start() {
 		echo "<head>";
 	}
 	
+	function End() {
+		return ("</head>");
+	}
 	
 	// Yes its messy but it makes it easier for RAD, will make a propper Website generation later
 	// Its mostly to get the maintemplate generated!
 	function AddDefaultHeaders($pageTitle = "CalPanel", $pageDescription = "Soooooooonnnnne My friends..... SOOOOOON!") {
-		?>
+		ob_start(); ?>
 			
 			<meta charset="utf-8">
 			<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -43,12 +47,7 @@
 		
 			<script src="assets/globals/plugins/modernizr/modernizr.min.js"></script>
 		
-		<?php
-	}
-	
-	function End() {
-		echo ("</head>");
-	}
+	<?php return ob_get_clean(); }
 	
 	/*class Headers {
 		
@@ -79,8 +78,6 @@
 					"assets/globals/css/plugins.css"
 			);
 		}
-		
-		
 	}*/
 	
 	

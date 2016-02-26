@@ -1,5 +1,17 @@
 <?php
-	
+	// ---------------
+		// ----- set mb_http_output encoding to UTF-8 -----
+			mb_http_output('UTF-8');
+		// ----- setup php for working with Unicode data -----
+			mb_internal_encoding('UTF-8');
+			mb_http_output('UTF-8');
+			mb_http_input('UTF-8');
+			mb_language('uni');
+			mb_regex_encoding('UTF-8');
+			ob_start('mb_output_handler');
+	// ---------------
+
+
 	function InitDependancies() {
 		//require_once("CalPanel/Skinning/Headers.php");
 	}
@@ -13,7 +25,7 @@
 		$scan = glob("$dir/*");
 		foreach ($scan as $path) {
 			if (preg_match('/\.php$/', $path)) {
-				echo "Included $path <br>";
+				//echo "Included $path <br>";
 				require_once $path;
 			} else if (is_dir($path)) {
 				_require_all($path, $depth+1);
