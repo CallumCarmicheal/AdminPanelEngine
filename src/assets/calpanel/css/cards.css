@@ -1,0 +1,12 @@
+@CHARSET "ISO-8859-1";
+
+.CalPanel-Cards-Header    { font-size: xx-large;    font-weight: 400; }
+.CalPanel-Cards-Header-bg { font-size: xx-large;    font-weight: 400; }
+.CalPanel-Cards-Header-md { font-size: x-large;     font-weight: 400; }
+.CalPanel-Cards-Header-sm { font-size: larger;      font-weight: 400; }
+
+.CalPanel-Cards-Body    { font-size: large;         font-weight: 100; }
+.CalPanel-Cards-Body-bg { font-size: large;         font-weight: 100; }
+.CalPanel-Cards-Body-md { font-size: medium;      font-weight: 100; }
+.CalPanel-Cards-Body-sm { font-size: small;      font-weight: 100; }
+

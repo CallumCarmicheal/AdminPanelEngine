@@ -8,7 +8,7 @@
 	}
 	
 	function End() {
-		return '</div><!--.menu-layer--> <!-- END OF MENU LAYER -->';
+		return '</ul></div><!--.menu-layer--> <!-- END OF MENU LAYER -->';
 	}
 	
 	
@@ -23,6 +23,11 @@
 	 */
 	function AddMenuLink($Name, $Link) {
 		$urlFormat = '<li> <a href="%s">%s</a> </li>';
+
+		if(!empty($Link)) if (!ctype_space($Link))
+			if(defined("DIRECTORY_PREPEND"))
+				$Link = DIRECTORY_PREPEND. $Link;
+		
 		$menuItem  = sprintf($urlFormat, $Link, $Name);
 		return $menuItem;
 	}

@@ -2,8 +2,12 @@
 	
 	namespace CalPanel\Structure\Sidebar;
 	
-	function CreateSideBar($sideBarName = "CalPanel") {
-		ob_start(); ?>
+	function CreateSideBar($imageLocation = "assets/calpanel/img/user/DefaultImage.jpg", $sideBarName = "CalPanel") {
+		ob_start(); 
+		
+		
+		
+		?>
 		
 		<div class="nav-bar-container">
 			<div class="nav-menu">
@@ -23,7 +27,7 @@
 	
 			<div class="nav-user">
 				<div class="user">
-					<img src="assets/calpanel/img/user/DefaultImage.jpg" alt="">
+					<img src="<?=$imageLocation?>" alt="">
 					<span class="badge">3</span>
 				</div>
 				<div class="cross">

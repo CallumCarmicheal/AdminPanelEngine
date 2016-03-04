@@ -12,7 +12,7 @@
 	
 	// Yes its messy but it makes it easier for RAD, will make a propper Website generation later
 	// Its mostly to get the maintemplate generated!
-	function AddDefaultHeaders($pageTitle = "CalPanel", $pageDescription = "Soooooooonnnnne My friends..... SOOOOOON!") {
+	function AddDefaultHeaders($baseDirectory = "", $pageTitle = "CalPanel", $pageDescription = "Soooooooonnnnne My friends..... SOOOOOON!") {
 		ob_start(); ?>
 			
 			<meta charset="utf-8">
@@ -29,23 +29,27 @@
 			<meta name="apple-touch-fullscreen" content="yes">
 		
 			<!-- BEGIN CORE CSS -->
-			<link rel="stylesheet" href="assets/admin1/css/admin1.css">
-			<link rel="stylesheet" href="assets/globals/css/elements.css">
+			<link rel="stylesheet" href="<?=$baseDirectory?>assets/admin1/css/admin1.css">
+			<link rel="stylesheet" href="<?=$baseDirectory?>assets/globals/css/elements.css">
 			<!-- END CORE CSS -->
 		
 			<!-- BEGIN PLUGINS CSS -->
-			<link rel="stylesheet" href="assets/globals/plugins/rickshaw/rickshaw.min.css">
-			<link rel="stylesheet" href="assets/globals/plugins/bxslider/jquery.bxslider.css">
+			<link rel="stylesheet" href="<?=$baseDirectory?>assets/globals/plugins/rickshaw/rickshaw.min.css">
+			<link rel="stylesheet" href="<?=$baseDirectory?>assets/globals/plugins/bxslider/jquery.bxslider.css">
 		
-			<link rel="stylesheet" href="assets/globals/css/plugins.css">
+			<link rel="stylesheet" href="<?=$baseDirectory?>assets/globals/css/plugins.css">
 			<!-- END PLUGINS CSS -->
 		
 			<!-- BEGIN SHORTCUT AND TOUCH ICONS -->
-			<link rel="shortcut icon" href="assets/globals/img/icons/favicon.ico">
-			<link rel="apple-touch-icon" href="assets/globals/img/icons/apple-touch-icon.png">
+			<link rel="shortcut icon" href="<?=$baseDirectory?>assets/globals/img/icons/favicon.ico">
+			<link rel="apple-touch-icon" href="<?=$baseDirectory?>assets/globals/img/icons/apple-touch-icon.png">
 			<!-- END SHORTCUT AND TOUCH ICONS -->
-		
-			<script src="assets/globals/plugins/modernizr/modernizr.min.js"></script>
+			
+			<!-- BEGIN SOME RANDOM STUFF -->
+			<link rel="stylesheet" type="text/css" href="<?=$baseDirectory?>assets/calpanel/css/cards.css">
+			<!-- END SOME RANDOM STUFF -->
+			
+			<script src="<?=$baseDirectory?>assets/globals/plugins/modernizr/modernizr.min.js"></script>
 		
 	<?php return ob_get_clean(); }
 	

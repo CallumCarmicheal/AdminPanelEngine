@@ -5,6 +5,4 @@
 	function Start() { return '<div class="content">'; }
 	function End() { return '</div>'; }
 	
-	
-	
 ?>

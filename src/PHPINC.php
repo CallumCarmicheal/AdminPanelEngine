@@ -38,7 +38,7 @@
 		// Just found what i need online, might aswell use that
 		// StackOverflow to the rescue!
 		
-		$dir = "CalPanel/";
+		$dir = DIRECTORY_PREPEND. "CalPanel/";
 		
 		_require_all($dir);
 	}
