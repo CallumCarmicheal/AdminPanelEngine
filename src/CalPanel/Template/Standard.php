@@ -26,6 +26,14 @@
 					// Menu List
 					echo Sidebar\Menu\Start(); {
 						echo SideBar\Menu\AddMenuLink("Dashboard", "pages/dashboard.php");
+						
+						echo Sidebar\Menu\MenuStart("Authentication"); {
+							echo Sidebar\Menu\AddMenuLink("Dashboard", 		"pages/auth/index.php");
+							echo Sidebar\Menu\AddMenuLink("Registration", 	"pages/auth/registration.php");
+							echo Sidebar\Menu\AddMenuLink("Login", 			"pages/auth/login.php");
+						} echo Sidebar\Menu\MenuEnd();
+						
+						
 						echo SideBar\Menu\AddMenuLink("Lockscreen", "pages/lockscreen.php");
 						
 						echo Sidebar\Menu\MenuStart("Tiles"); {

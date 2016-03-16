@@ -5,16 +5,19 @@
 	
 	use CalPanel\Structure;
 	use CalPanel\Structure\Sidebar;
+
+	use CalPanel\Structure\HTML 					as HTML;
+	use CalPanel\Structure\Lockscreen\Lockscreen 	as Lockscreen;
 	
 	IncludeEveryDependancy();
 	
-	echo Structure\HTML\Base\Start(); {
+	echo HTML\Base\Start(); {
 		/* Render the Header */
-		echo Structure\HTML\Headers\Start(); {
-			echo Structure\HTML\Headers\AddDefaultHeaders(DIRECTORY_PREPEND);
-		} echo Structure\HTML\Headers\End();
+		echo HTML\Headers\Start(); {
+			echo HTML\Headers\AddDefaultHeaders(DIRECTORY_PREPEND);
+		} echo HTML\Headers\End();
 		
-		echo CalPanel\Structure\Lockscreen\Lockscreen\CreateLockscreen(
+		echo Lockscreen\CreateLockscreen(
 			"example.com",
 			"Callum Carmicheal",
 	

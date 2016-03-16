@@ -96,6 +96,7 @@
  			.bg-lock-screen .bg-blur:before {
 			    background-size: cover;
 			    background: url("<?=$backgroundImage?>");
+			    margin: -10px -20px -20px -10px;
 			}
  		</style>
  	
