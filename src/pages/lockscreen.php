@@ -6,7 +6,7 @@
 	use CalPanel\Structure;
 	use CalPanel\Structure\Sidebar;
 
-	use CalPanel\Structure\HTML 					as HTML;
+	use CalPanel\Structure\HTML 			as HTML;
 	use CalPanel\Structure\Lockscreen\Lockscreen 	as Lockscreen;
 	
 	IncludeEveryDependancy();
